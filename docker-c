@@ -1,0 +1,22 @@
+
+#create image from Dockerfile 
+docker build -t wishcloudsingh/flaskapp . -f Dockerfile
+
+#list images 
+docker images
+
+#run the image 
+docker run -p 5000:5000 wishcloudsingh/flaskapp 
+
+#run in background and return id 
+docker run -dt -p 5000:5000 wishcloudsingh/flaskapp
+
+
+#list running container 
+docker ps 
+
+#stop running container 
+docker stop 53f2212ec16a<container id>
+
+#buildpack to reduce the image size 
+#https://buildpacks.io/docs/app-journey/
